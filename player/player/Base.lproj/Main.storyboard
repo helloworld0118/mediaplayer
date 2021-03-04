@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="h34-RT-9Hb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--MainViewController-->
+        <scene sceneID="mTC-1I-EeK">
+            <objects>
+                <tableViewController storyboardIdentifier="MainController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TMo-va-AJ8" userLabel="MainViewController" customClass="MainController" customModule="player" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cuo-GZ-OhN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KxS-bx-xcs">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KxS-bx-xcs" id="C2Y-C4-Pa8">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TMo-va-AJ8" id="a1q-5p-Nx4"/>
+                            <outlet property="delegate" destination="TMo-va-AJ8" id="9tk-fX-l3H"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="视频列表" id="b6e-46-1ez"/>
+                    <connections>
+                        <outlet property="moviesTable" destination="cuo-GZ-OhN" id="TDO-Ad-upP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yF2-PG-JJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="174"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="IOm-Q4-xLR">
+            <objects>
+                <viewController id="h34-RT-9Hb" customClass="RootViewController" customModule="player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Icr-7F-JVF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nm-ut-NDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-861" y="180"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cT3-oh-9Nt">
+            <objects>
+                <navigationController storyboardIdentifier="NavController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uBr-Ft-dLg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k2X-8w-v8z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TMo-va-AJ8" kind="relationship" relationship="rootViewController" id="GQi-jg-otV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYR-9b-wKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-513" y="174"/>
+        </scene>
+        <!--Left Menu View Controller-->
+        <scene sceneID="gqJ-Ox-5WK">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xgx-0c-MA2" customClass="LeftMenuViewController" customModule="player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sFh-H8-FQB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zev-oT-ExJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="807"/>
+        </scene>
+        <!--Right Menu View Controller-->
+        <scene sceneID="5ki-t0-Yr3">
+            <objects>
+                <viewController storyboardIdentifier="RightMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qEJ-MC-4eq" customClass="RightMenuViewController" customModule="player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fDT-ub-YeH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9RP-MJ-tWU">
+                                <rect key="frame" x="137" y="118" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydm-8e-RyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="1596"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="viewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieplayer" destination="kh9-bI-dsS" id="xyT-v3-FcZ"/>
+                        <outlet property="searchDisplayController" destination="AE1-ax-7dZ" id="Xkt-Zv-7Y3"/>
+                        <segue destination="TMo-va-AJ8" kind="modal" id="NEU-ss-9hW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bbW-vS-O10">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="bk7-Ho-FOf"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="R2o-7u-em9"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="l6V-Sq-qu5"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="BKU-Yz-jZj"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="AE1-ax-7dZ">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="wuN-qN-SkU"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="Q1S-9Y-TgQ"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="bfs-Rk-Tqc"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="y3m-Kh-bAW"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="347" y="174"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GQi-jg-otV"/>
+    </inferredMetricsTieBreakers>
+</document>
